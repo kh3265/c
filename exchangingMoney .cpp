@@ -24,18 +24,27 @@ int main(){
 	int choose_Num;//고르는 번호 
 	printf("얼마를  환전하시겠습니까??\n");
 	scanf("%d", &korea_Money);//액수입력 
+	while(true){
 	printf("어느 나라 돈으로 환전하시겠습니까?\n");
 	printf("1.미국 2.중국 3.일본\n");
 	scanf("%d",&choose_Num);//번호입력  
 	
 	if(choose_Num==1){//1번을 고르면 
 	    exchange_Package(korea_Money, 1233, "달라") ;//입력된 액수, 1233.5의 환율, "달라"를 이용해서 환전계산을 해주고 그에따른 print부분 출력해주는 함수 
-	    }
+	    break;
+		}
 	else if(choose_Num==2){//2번을 고르면.. 이하생략 
 		exchange_Package(korea_Money, 193.23, "위안");
+		break;
      	}
 	else if(choose_Num==3){//3번을 고르면.. 이하생략 
 		exchange_Package(korea_Money, 983.89, "엔");
+		break;
+	}
+	else{
+ 		printf("잘못된 번호입니다. 다시 입력해주세요\n");
+		 //다른번호를 고르면 while 반복문 처음으로 돌아간다.	
+	    }
     }
 }
 
