@@ -65,12 +65,12 @@ char* specialType(int c) {
 int main() {
 	int today_Date;
 	printf("현재 날짜를 입력하여주세요.(ex.20220414)");
-	scanf("%d", &today_Date);//현재날짜 불러오는 것을 아직 할 줄 모른다. 
+	scanf("%d", &today_Date);//현재날짜 불러오는 것을 아직 할 줄 모른다. 그래서 날짜 입력받음. 
 
 	int ticket_Type, numberof_Tickets, prefer_Number, ticket_Price, total_Price, human_Type;
 	char id_Number[13];
 	int try_Number = 0;
-	int ticket_Typearr[5];
+	int ticket_Typearr[5];// 
 	int human_Typearr[5];
 	int count_Ticketarr[5];
 	int ticket_Pricearr[5];
@@ -85,7 +85,7 @@ int main() {
 			scanf("%d", &ticket_Type);
 			printf("%s입니다\n", ticketType(ticket_Type));
 
-			ticket_Typearr[try_Number - 1] = ticket_Type;//배열에 1(주간권) 2(야간권)이 차곡차곡쌓임 
+			ticket_Typearr[try_Number - 1] = ticket_Type;//배열에 1(주간권) 또는 2(야간권)이 차곡차곡쌓임 
 			//나중 티켓 출력했을때 주간권인지 야간권인지 보이게 해주는 부분 
 
 			printf("주민번호를 입력하세요\n");//<<나이계산부분 시작>> 
